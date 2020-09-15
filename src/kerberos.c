@@ -306,7 +306,7 @@ static PyObject *authGSSSign(PyObject *self, PyObject *args, PyObject* keywds)
         return NULL;
     }
 
-    pytoken = PyString_FromString(token);
+    pytoken = PyUnicode_FromString(token);
     free(token);
 
     return pytoken;
